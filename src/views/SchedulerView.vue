@@ -1,30 +1,28 @@
 <template>
-  <div>
-    <div ref="scheduler" class="scheduler">
-      <div class="scheduler__wrapper-body">
-        <div class="scheduler__aside">
-          <div class="scheduler__aside-header">
-          </div>
-          <div v-for="el in data" class="scheduler__aside-row">
-            <div class="user-info">
-              <div class="avatar">
-                <div  class="avatar-box"
-                      :style="{
-                    backgroundImage: `url(${
-                      el.room.img || '/assets/vue.svg'
-                    })`,
-                  }">
-
-                </div>
+  <div ref="scheduler" class="scheduler">
+    <div class="scheduler__wrapper-body">
+      <div class="scheduler__aside">
+        <div class="scheduler__aside-header">
+        </div>
+        <div v-for="el in data" class="scheduler__aside-row">
+          <div class="user-info">
+            <div class="avatar">
+              <div  class="avatar-box"
+                    :style="{
+                  backgroundImage: `url(${
+                    el.room.img || '/assets/vue.svg'
+                  })`,
+                }">
               </div>
-              <div>
-                <span>{{  el.room.name}}</span>
-              </div>
+            </div>
+            <div>
+              <span>{{  el.room.name}}</span>
             </div>
           </div>
         </div>
-        <div class="scheduler__main-block">
-          <div class="scheduler__header">
+      </div>
+      <div class="scheduler__main-block">
+        <div class="scheduler__header">
 <!--            <div-->
 <!--                v-for="day in monthAllDays"-->
 <!--                :key="day"-->
@@ -34,7 +32,7 @@
 <!--              <h6>{{ getDayOfMonth(day) }}</h6>-->
 <!--              <span>{{ getDayOfWeek(day) }}</span>-->
 <!--            </div>-->
-          </div>
+        </div>
 <!--          <div v-for="el in data" :key="el.name" class="scheduler__main-row" :class="el.user">-->
 <!--            <div v-for="(day, index) in monthAllDays" class="main-row-cell"-->
 <!--                 :class="[-->
@@ -55,7 +53,6 @@
 <!--              </div>-->
 <!--            </div>-->
 <!--          </div>-->
-        </div>
       </div>
     </div>
   </div>
@@ -76,6 +73,11 @@ const data = [
         request_type: "Mandy Till",
         start_date: "2024-09-04T00:00:00",
         end_date: "2024-09-05T00:00:00",
+      },
+      {
+        request_type: "Nora J",
+        start_date: "2024-09-013T00:00:00",
+        end_date: "2024-09-16T00:00:00",
       },
     ],
   },

@@ -5,14 +5,31 @@ const router = createRouter({
     routes: [
         {
             path: "/",
-            name: "enter-page",
+            component: () => import("../layouts/AuthLayout.vue"),
             beforeEnter: () => {
-                return "/app/scheduler";
+                return "/auth/login";
             },
+        },
+        {
+            path: "/auth",
+            component: () => import("../layouts/AuthLayout.vue"),
+            children: [
+                {
+                    path: "login",
+                    name: "auth-login",
+                    component: () => import("../views/auth/LoginView.vue"),
+                },
+                // {
+                //     path: "login",
+                //     name: "auth-login",
+                //     component: () => import("../views/LoginView.vue"),
+                // },
+            ],
         },
         {
 
             path: "/app",
+            component: () => import("../layouts/BaseLayout.vue"),
             children: [
                 {
                     path: "scheduler",
