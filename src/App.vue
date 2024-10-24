@@ -5,7 +5,7 @@
   <RouterView />
 </template>
 <style lang="scss">
-@import "../src/assets/scss/main.scss";
+@use "../src/assets/scss/main.scss";
 </style>
 
 

@@ -1,6 +1,8 @@
 header {
+ background: linear-gradient(133deg, #130B29 40%, #8b826c 100%);
+
  .logo {
-  max-width: 100px
+  max-width: 100px;
  }
  #navbar-avatar-box {
   width: 48px;
@@ -8,5 +10,16 @@ header {
   background-size: cover;
   background-position: center;
   height: 48px;
+ }
+ .item-link {
+  color: #A1B1CB;
+ }
+ .search input {
+  background-color: #ffffff24;
+  border: 1px solid #A1B1CB;
+ }
+ .style-switcher-toggle {
+  font-size: 30px;
+  color: #A1B1CB;
  }
 }

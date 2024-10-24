@@ -1,2 +1,4 @@
-@import "components/baseblock";
-@import "components/navigations/header";
+@use "components/base-block";
+@use "components/navigations/header";
+
+@use "layouts/base-layout";
